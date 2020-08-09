@@ -7,6 +7,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    id: 1,
     spaces: []
   },
   mutations: {
@@ -26,8 +27,12 @@ export default new Vuex.Store({
         });
     },
     saveNewParkingLot({ dispatch }) {
+      //let key = this.state.id++;
+      function rand() {
+        return Math.floor(Math.random() * (999999 - 0)+ 0);
+      }
       const newLot = {
-        id: "0001",
+        id: rand() ,
         name: "Parkplatz Ost",
         guide: "Peter",
         spaces: 100,

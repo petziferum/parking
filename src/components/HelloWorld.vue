@@ -6,8 +6,12 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col v-for="space in getParkingSpaces" :key="space.id">
-        <v-card>{{space}}</v-card>
+      <v-col cols="2" v-for="space in getParkingSpaces" :key="space.id">
+        <v-card><v-card-title>{{space.name}}</v-card-title>
+        <v-card-subtitle>{{space.id}}</v-card-subtitle>
+        <v-card-subtitle>{{space.guide}}</v-card-subtitle>
+        <v-card-subtitle>{{space.spaces}}</v-card-subtitle></v-card>
+
       </v-col>
     </v-row>
   </v-container>
